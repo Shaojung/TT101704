@@ -36,4 +36,11 @@ public class MyService extends Service {
         handler.post(showTime);
         return Service.START_NOT_STICKY;
     }
+
+    @Override
+    public void onDestroy() {
+        Log.i("mylog", "onDestroy()");
+        handler.removeCallbacks(showTime);
+        super.onDestroy();
+    }
 }
