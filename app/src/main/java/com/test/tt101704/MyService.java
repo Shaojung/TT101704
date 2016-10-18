@@ -18,7 +18,12 @@ public class MyService extends Service {
             handler.postDelayed(this, 1000);
             i--;
             Log.i("mylog", "i=" + i);
-
+            if (i == 0)
+            {
+                Intent it = new Intent();
+                it.setAction("收到我的廣播");
+                sendBroadcast(it);
+            }
         }
     };
 
