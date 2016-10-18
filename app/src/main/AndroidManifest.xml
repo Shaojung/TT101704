@@ -26,7 +26,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="收到我的廣播" />
+                <action android:name="MyBroadcast" />
             </intent-filter>
         </receiver>
     </application>

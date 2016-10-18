@@ -21,7 +21,7 @@ public class MyService extends Service {
             if (i == 0)
             {
                 Intent it = new Intent();
-                it.setAction("收到我的廣播");
+                it.setAction("MyBroadcast");
                 sendBroadcast(it);
             }
         }
