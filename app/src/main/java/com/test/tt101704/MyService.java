@@ -10,11 +10,15 @@ import java.util.Date;
 
 public class MyService extends Service {
     private Handler handler = new Handler();
+    int i = 10;
     public Runnable showTime = new Runnable() {
         @Override
         public void run() {
             Log.i("mylog", new Date().toString());
             handler.postDelayed(this, 1000);
+            i--;
+            Log.i("mylog", "i=" + i);
+
         }
     };
 
